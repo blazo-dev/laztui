@@ -1,0 +1,54 @@
+---
+import FeatureItem from "./FeatureItem.astro";
+
+const features = [
+    {
+        title: "No setup required",
+        description:
+            "Just copy and paste. No build tools, no configuration, no dependencies to manage.",
+        iconColor: "blue-500",
+        bgGradient: "from-blue-500/20 to-blue-500/5",
+        svgPath: "M13 10V3L4 14h7v7l9-11h-7z",
+    },
+    {
+        title: "Built with clean HTML + TailwindCSS",
+        description:
+            "Pure HTML and Tailwind classes. No custom CSS, no JavaScript frameworks required.",
+        iconColor: "green-500",
+        bgGradient: "from-green-500/20 to-green-500/5",
+        svgPath: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
+    },
+    {
+        title: "Easily copy and paste into any project",
+        description:
+            "Works with any framework or vanilla HTML. Customize colors, spacing, and behavior easily.",
+        iconColor: "purple-500",
+        bgGradient: "from-purple-500/20 to-purple-500/5",
+        svgPath:
+            "M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z",
+    },
+    {
+        title: "Lightweight, fast, and beginner-friendly",
+        description:
+            "Minimal code, maximum impact. Perfect for beginners and experienced developers alike.",
+        iconColor: "orange-500",
+        bgGradient: "from-orange-500/20 to-orange-500/5",
+        svgPath:
+            "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z",
+    },
+];
+---
+
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    {
+        features.map((feature) => (
+            <FeatureItem
+                title={feature.title}
+                description={feature.description}
+                iconColor={feature.iconColor}
+                bgGradient={feature.bgGradient}
+                svgPath={feature.svgPath}
+            />
+        ))
+    }
+</div>

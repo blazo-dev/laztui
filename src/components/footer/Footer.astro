@@ -1,0 +1,17 @@
+---
+import FooterBrand from "./FooterBrand.astro";
+import FooterLinks from "./FooterLinks.astro";
+import FooterBottom from "./FooterBottom.astro";
+---
+
+<footer
+    class="border-t border-zinc-800 bg-gradient-to-b from-zinc-800/20 via-transparent to-zinc-800/20"
+>
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <FooterBrand />
+            <FooterLinks />
+        </div>
+        <FooterBottom />
+    </div>
+</footer>

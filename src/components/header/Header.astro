@@ -1,0 +1,23 @@
+---
+import BrandLogo from "./BrandLogo.astro";
+import DeskNav from "./DeskNav.astro";
+import MobileMenuToggle from "./MobileMenuToggle.astro";
+---
+
+<header
+    class="border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-sm sticky top-0 z-50"
+>
+    <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <BrandLogo />
+            </div>
+
+            <DeskNav />
+
+            <div class="md:hidden">
+                <MobileMenuToggle />
+            </div>
+        </div>
+    </div>
+</header>
