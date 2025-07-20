@@ -1,52 +1,99 @@
-# Astro Starter Kit: Basics
+# LaztUI
 
-```sh
-npm create astro@latest -- --template basics
+## Build faster. Stay consistent.
+
+LaztUI is a collection of beautiful, accessible UI components built with clean HTML and TailwindCSS. Simply copy, paste, and customize each component to perfectly match your design system — speeding up your workflow while maintaining visual consistency across your projects.
+
+---
+
+## Technologies Used
+
+-   **Astro:** for building the interface and managing components.
+-   **TailwindCSS:** for utility-first, fast, and customizable styling without writing custom CSS.
+
+---
+
+## Project Purpose
+
+LaztUI aims to provide developers of all skill levels with a UI component library that is:
+
+-   **Easy to use:** requires no setup or external dependencies.
+-   **Flexible:** works with any framework or plain HTML.
+-   **Lightweight and fast:** minimal code for maximum performance impact.
+-   **Accessible:** components designed with usability and accessibility in mind.
+
+---
+
+## Why Choose LaztUI?
+
+-   **No setup or configuration needed:** Just copy and paste—no build tools or package management.
+-   **Clean, maintainable code:** Uses standard HTML and TailwindCSS classes, with no custom CSS or JavaScript.
+-   **Highly compatible:** Works seamlessly in any environment—from modern frameworks to static websites.
+-   **Simple customization:** Easily adjust colors, spacing, and behavior by modifying Tailwind classes.
+-   **Perfect for beginners and pros alike:** Easy to understand and adapt, speeding up development without sacrificing quality.
+
+---
+
+## Project Structure
+
+The project is organized modularly to facilitate navigation and maintenance:
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+public
+└───src
+├───assets # Static resources like images and icons
+├───components # Reusable components organized by feature
+│ ├───features
+│ ├───footer
+│ ├───header
+│ ├───hero
+│ ├───preview
+│ │ └───components
+│ ├───showcases
+│ │ └───components
+│ │ ├───alerts
+│ │ ├───buttons
+│ │ ├───cards
+│ │ ├───inputs
+│ │ └───modals
+│ └───sidebar
+├───data # Static data and content
+├───layouts # Page layout templates
+├───pages # Main site pages
+│ └───components
+└───styles # Global styles (Tailwind config, etc.)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+---
 
-## 🧞 Commands
+## Key Features
 
-All commands are run from the root of the project, from a terminal:
+- **Accessible and responsive UI components:** buttons, modals, cards, inputs, alerts, and more.
+- **Consistent design:** all components share the same visual language based on TailwindCSS.
+- **Easy integration:** copy and paste directly into any project without worrying about dependencies or conflicts.
+- **Multi-framework compatibility:** perfect for React, Vue, Angular, Astro, or plain HTML projects.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+## Environment Variables
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+No environment variables are required to use LaztUI.
+
+---
+
+## How to Use LaztUI
+
+1. Navigate to the folder of the component you want to use.
+2. Copy the provided HTML code block.
+3. Paste it directly into your project—whether plain HTML or inside your framework components.
+4. Customize the Tailwind classes to adjust colors, sizes, or behavior according to your design.
+
+That’s it! No setup, no build, no hassle.
+
+---
+
+## Credits
+
+LaztUI is an open-source project created and maintained by [Bryan Lazo](https://github.com/blazo-dev).
+
