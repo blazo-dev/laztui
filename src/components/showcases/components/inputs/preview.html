@@ -1,0 +1,48 @@
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div class="space-y-6">
+        <div>
+            <label class="block text-sm font-medium text-zinc-300 mb-2">Text Input</label>
+            <input type="text" placeholder="Enter your name"
+                class="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 text-gray-100 placeholder-zinc-400 focus:border-blue-500 focus:outline-none transition-colors" />
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-zinc-300 mb-2">Email Input</label>
+            <input type="email" placeholder="your@email.com"
+                class="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 text-gray-100 placeholder-zinc-400 focus:border-blue-500 focus:outline-none transition-colors" />
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-zinc-300 mb-2">Select Dropdown</label>
+            <select
+                class="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 text-gray-100 focus:border-blue-500 focus:outline-none transition-colors">
+                <option>Choose an option</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+        </div>
+    </div>
+    <div class="space-y-6">
+        <div>
+            <label class="block text-sm font-medium text-zinc-300 mb-2">Textarea</label>
+            <textarea rows="4" placeholder="Enter your message..."
+                class="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 text-gray-100 placeholder-zinc-400 focus:border-blue-500 focus:outline-none transition-colors resize-none"></textarea>
+        </div>
+        <div class="space-y-3">
+            <label class="flex items-center space-x-3 cursor-pointer">
+                <input type="checkbox"
+                    class="w-5 h-5 text-blue-600 bg-zinc-800 border-zinc-700 rounded focus:ring-blue-500 focus:ring-2" />
+                <span class="text-zinc-300">I agree to the terms</span>
+            </label>
+            <label class="flex items-center space-x-3 cursor-pointer">
+                <input type="radio" name="radio-group"
+                    class="w-5 h-5 text-blue-600 bg-zinc-800 border-zinc-700 focus:ring-blue-500 focus:ring-2" />
+                <span class="text-zinc-300">Option A</span>
+            </label>
+            <label class="flex items-center space-x-3 cursor-pointer">
+                <input type="radio" name="radio-group"
+                    class="w-5 h-5 text-blue-600 bg-zinc-800 border-zinc-700 focus:ring-blue-500 focus:ring-2" />
+                <span class="text-zinc-300">Option B</span>
+            </label>
+        </div>
+    </div>
+</div>

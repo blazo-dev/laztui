@@ -1,0 +1,26 @@
+---
+interface Props {
+    toggleId: string;
+    additionalClasses?: string;
+}
+
+const { toggleId, additionalClasses } = Astro.props;
+---
+
+<input type="checkbox" id={toggleId} class="peer hidden" />
+<label
+    for={toggleId}
+    class={`block cursor-pointer p-2 rounded-lg hover:bg-zinc-900/50 transition-colors duration-300 ${additionalClasses}`}
+>
+    <div class="w-6 h-6 grid gap-1 place-content-center">
+        <span
+            class="block w-5 h-0.5 bg-gray-300 transition-all duration-300 peer-checked:rotate-45 peer-checked:translate-y-1.5"
+        ></span>
+        <span
+            class="block w-5 h-0.5 bg-gray-300 transition-all duration-300 peer-checked:opacity-0"
+        ></span>
+        <span
+            class="block w-5 h-0.5 bg-gray-300 transition-all duration-300 peer-checked:-rotate-45 peer-checked:-translate-y-1.5"
+        ></span>
+    </div>
+</label>

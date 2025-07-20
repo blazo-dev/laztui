@@ -1,0 +1,94 @@
+---
+import BrandLogo from "../header/BrandLogo.astro";
+import ToggleButton from "../header/ToggleButton.astro";
+import MobileOverlay from "./MobileOverlay.astro";
+import SidebarLink from "./SidebarLink.astro";
+---
+
+<ToggleButton
+    toggleId="sidebar-toggle"
+    additionalClasses="md:hidden fixed top-4 right-4 z-50"
+/>
+<aside
+    class="fixed left-0 top-0 h-full w-80 bg-zinc-900/50 backdrop-blur-sm border-r border-zinc-800 transform -translate-x-full transition-transform duration-300 peer-checked:translate-x-0 md:translate-x-0 z-40"
+>
+    <header class="p-6 border-b border-zinc-800">
+        <div class="flex items-center space-x-3">
+            <BrandLogo />
+        </div>
+    </header>
+
+    <nav class="p-6">
+        <div class="space-y-2">
+            <SidebarLink
+                href="#buttons"
+                label="Buttons"
+                gradientFrom="from-blue-500/20"
+                gradientTo="to-blue-500/5"
+                iconColor="text-blue-400"
+                iconPath="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
+            />
+            <SidebarLink
+                href="#inputs"
+                label="Inputs"
+                gradientFrom="from-green-500/20"
+                gradientTo="to-green-500/5"
+                iconColor="text-green-400"
+                iconPath="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+            />
+            <SidebarLink
+                href="#cards"
+                label="Cards"
+                gradientFrom="from-purple-500/20"
+                gradientTo="to-purple-500/5"
+                iconColor="text-purple-400"
+                iconPath="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+            />
+            <SidebarLink
+                href="#modals"
+                label="Modals"
+                gradientFrom="from-orange-500/20"
+                gradientTo="to-orange-500/5"
+                iconColor="text-orange-400"
+                iconPath="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            />
+            <SidebarLink
+                href="#alerts"
+                label="Alerts"
+                gradientFrom="from-red-500/20"
+                gradientTo="to-red-500/5"
+                iconColor="text-red-400"
+                iconPath="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"
+            />
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-zinc-800">
+            <div class="px-4 py-2">
+                <p
+                    class="text-xs text-zinc-500 uppercase tracking-wider font-semibold"
+                >
+                    Resources
+                </p>
+            </div>
+            <div class="space-y-1 mt-3">
+                <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-zinc-400 hover:text-gray-100 transition-colors"
+                    >Documentation</a
+                >
+                <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-zinc-400 hover:text-gray-100 transition-colors"
+                    >GitHub</a
+                >
+                <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-zinc-400 hover:text-gray-100 transition-colors"
+                    >Support</a
+                >
+            </div>
+        </div>
+    </nav>
+</aside>
+
+<MobileOverlay />

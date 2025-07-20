@@ -1,10 +1,27 @@
-<div class="flex items-center space-x-3">
-    <div
-        class="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center"
-    >
-        <span class="text-gray-100 font-bold text-sm">L</span>
+---
+interface Props {
+    subtitle?: string;
+}
+
+const { subtitle } = Astro.props;
+---
+
+<div class="flex items-center gap-3">
+    <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-1">
+        <a
+            href="/"
+            class="w-8 h-8 grid place-items-center text-gray-100 font-bold text-sm"
+            aria-label="Go to homepage">L</a
+        >
     </div>
     <div>
-        <h1 class="text-xl font-bold text-gray-100">LaztUI</h1>
+        <a href="/" class="text-xl font-bold text-gray-100">LaztUI</a>
+        {
+            subtitle && (
+                <p class="text-xs text-gray-400 -mt-1 hidden sm:block">
+                    {subtitle}
+                </p>
+            )
+        }
     </div>
 </div>

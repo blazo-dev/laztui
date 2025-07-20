@@ -1,0 +1,36 @@
+---
+export interface Props {
+    name: string;
+}
+
+const { name } = Astro.props;
+---
+
+<input
+    type="radio"
+    id={`${name}-preview`}
+    name={`${name}-tab`}
+    class="peer/preview hidden"
+    checked
+/>
+<input
+    type="radio"
+    id={`${name}-code`}
+    name={`${name}-tab`}
+    class="peer/code hidden"
+/>
+
+<div class="flex bg-zinc-800/50 rounded-lg p-1 w-fit mb-6">
+    <label
+        for={`${name}-preview`}
+        class="px-4 py-2 rounded-md text-sm font-medium cursor-pointer transition-all peer-checked/preview:bg-blue-600 peer-checked/preview:text-gray-100 hover:text-gray-100 bg-blue-600 text-gray-100"
+    >
+        Preview
+    </label>
+    <label
+        for={`${name}-code`}
+        class="px-4 py-2 rounded-md text-sm font-medium cursor-pointer transition-all peer-checked/code:bg-blue-600 peer-checked/code:text-gray-100 text-zinc-400 hover:text-gray-100"
+    >
+        HTML Code
+    </label>
+</div>

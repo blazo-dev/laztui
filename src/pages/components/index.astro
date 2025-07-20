@@ -1,0 +1,95 @@
+---
+import Components from "../../components/showcases/Components.astro";
+import Sidebar from "../../components/sidebar/Sidebar.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+    <Sidebar />
+    <Components />
+</Layout>
+<script is:inline>
+    // Tab switching functionality
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get all tab labels
+        const tabLabels = document.querySelectorAll(
+            'label[for*="-preview"], label[for*="-code"]'
+        );
+
+        tabLabels.forEach((label) => {
+            label.addEventListener("click", function () {
+                const targetId = this.getAttribute("for");
+                const targetInput = document.getElementById(targetId);
+
+                if (targetInput) {
+                    targetInput.checked = true;
+
+                    // Update visual state of tab buttons
+                    const tabGroup = targetInput.name;
+                    const allTabsInGroup = document.querySelectorAll(
+                        `input[name="${tabGroup}"]`
+                    );
+                    const allLabelsInGroup = document.querySelectorAll(
+                        `label[for*="${tabGroup.split("-")[0]}"]`
+                    );
+
+                    // Remove active state from all tabs in this group
+                    allLabelsInGroup.forEach((tabLabel) => {
+                        tabLabel.classList.remove(
+                            "bg-blue-600",
+                            "text-gray-100"
+                        );
+                        tabLabel.classList.add("text-zinc-400");
+                    });
+
+                    // Add active state to clicked tab
+                    this.classList.remove("text-zinc-400");
+                    this.classList.add("bg-blue-600", "text-gray-100");
+
+                    // Show/hide content
+                    const sectionId = tabGroup.split("-")[0];
+                    const previewContent = document.querySelector(
+                        `#${sectionId} .peer-checked\\/preview\\:block`
+                    );
+                    const codeContent = document.querySelector(
+                        `#${sectionId} .peer-checked\\/code\\:block`
+                    );
+
+                    if (targetId.includes("preview")) {
+                        if (previewContent) {
+                            previewContent.classList.remove("hidden");
+                            previewContent.classList.add("block");
+                        }
+                        if (codeContent) {
+                            codeContent.classList.remove("block");
+                            codeContent.classList.add("hidden");
+                        }
+                    } else if (targetId.includes("code")) {
+                        if (codeContent) {
+                            codeContent.classList.remove("hidden");
+                            codeContent.classList.add("block");
+                        }
+                        if (previewContent) {
+                            previewContent.classList.remove("block");
+                            previewContent.classList.add("hidden");
+                        }
+                    }
+                }
+            });
+        });
+
+        // Initialize default states
+        const sections = ["buttons", "inputs", "cards", "modals", "alerts"];
+        sections.forEach((section) => {
+            const previewTab = document.getElementById(`${section}-preview`);
+            const previewLabel = document.querySelector(
+                `label[for="${section}-preview"]`
+            );
+
+            if (previewTab && previewTab.checked && previewLabel) {
+                previewLabel.classList.add("bg-blue-600", "text-gray-100");
+                previewLabel.classList.remove("text-zinc-400");
+            }
+        });
+    });
+</script>

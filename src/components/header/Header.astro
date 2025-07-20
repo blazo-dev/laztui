@@ -1,7 +1,8 @@
 ---
 import BrandLogo from "./BrandLogo.astro";
 import DeskNav from "./DeskNav.astro";
-import MobileMenuToggle from "./MobileMenuToggle.astro";
+import MobileMenuDropdown from "./MobileMenuDropdown.astro";
+import ToggleButton from "./ToggleButton.astro";
 ---
 
 <header
@@ -16,7 +17,8 @@ import MobileMenuToggle from "./MobileMenuToggle.astro";
             <DeskNav />
 
             <div class="md:hidden">
-                <MobileMenuToggle />
+                <ToggleButton toggleId="mobile-menu-toggle" />
+                <MobileMenuDropdown />
             </div>
         </div>
     </div>
